@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import TrelloCard from './TrelloCard'
+import TrelloActionButton from './TrelloActionButton'
 
 const TrelloList = ({ title, cards }) => {
     return (
@@ -12,17 +13,18 @@ const TrelloList = ({ title, cards }) => {
                     )
                 })
             }
-
+            < TrelloActionButton list />
         </div>
     )
 }
 
 const styles = {
     container: {
-        backgroundColor: '#eee',
+        backgroundColor: '#E5EFF5',
         borderRadius: 3,
         width: 300,
-        padding: 8
+        padding: 8,
+        marginRight: 8
     }
 }
 

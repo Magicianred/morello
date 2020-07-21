@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
@@ -18,7 +18,8 @@ const TrelloCard = ({ skill }) => {
 
 const styles = {
     cardContainer: {
-        marginBottom: 8
+        marginBottom: 8,
+        backgroundColor: '#FFFFFF'
     }
 }
 export default TrelloCard;

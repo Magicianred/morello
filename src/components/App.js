@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import TrelloList from './TrelloList';
 import { connect } from 'react-redux';
+import TrelloActionButton from './TrelloActionButton';
 
 class App extends Component {
   render() {
     const { lists } = this.props;
     return (
-      <div className="App" >
+      <div style={styles.appContainer} >
         <h3 style={styles.header} >Morello</h3>
         <div style={styles.listContainer}>
           {
@@ -19,6 +20,8 @@ class App extends Component {
                 />)
             })
           }
+          {/* <TrelloActionButton /> */}
+
         </div>
 
       </div>
@@ -27,6 +30,9 @@ class App extends Component {
 }
 
 const styles = {
+  appContainer: {
+    backGroundColor: "#3C9EDE"
+  },
   header: {
     textAlign: "center"
   },
