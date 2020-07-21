@@ -1,8 +1,7 @@
-
-## Available Scripts
-
-# `Yarn && yarn start`
+### Scripts
+##### `Yarn && yarn start`
 
 
 #### TODOS
-[*] sets up redux
+    [x] Redux for Connecting state.
+    [x] Material-ui and in-line styling for specific components.
