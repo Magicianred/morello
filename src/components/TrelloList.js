@@ -13,7 +13,7 @@ const TrelloList = ({ title, cards }) => {
                     )
                 })
             }
-            < TrelloActionButton list />
+            < TrelloActionButton />
         </div>
     )
 }

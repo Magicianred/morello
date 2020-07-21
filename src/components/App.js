@@ -20,7 +20,7 @@ class App extends Component {
                 />)
             })
           }
-          {/* <TrelloActionButton /> */}
+          <TrelloActionButton list />
 
         </div>
 
