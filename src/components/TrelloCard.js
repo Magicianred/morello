@@ -2,11 +2,11 @@ import React, { Component } from 'react'
 import Card from '@material-ui/core/Card'
 import Typography from '@material-ui/core/Typography';
 
-const TrelloCard = () => {
+const TrelloCard = ({ skill }) => {
     return (
         <Card>
-            <Typography gutterBottom>
-                Word
+            <Typography gutterBottom >
+                <span>Skill:{skill}</span>
             </Typography>
         </Card>
     )

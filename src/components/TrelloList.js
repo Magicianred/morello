@@ -1,11 +1,18 @@
 import React, { Component } from 'react'
 import TrelloCard from './TrelloCard'
 
-const TrelloList = ({ title }) => {
+const TrelloList = ({ title, cards }) => {
     return (
         <div style={styles.container} >
             <h4>{title}</h4>
-            <TrelloCard />
+            {
+                cards.map(card => {
+                    return (
+                        <TrelloCard key={card.id} skill={card.skill} />
+                    )
+                })
+            }
+
         </div>
     )
 }
