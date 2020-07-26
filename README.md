@@ -3,5 +3,5 @@
 
 
 #### TODOS
-    [x] Redux for Connecting state.
-    [x] Material-ui and in-line styling for specific components.
+    [*]Redux for Connecting state.
+    [*] Material-ui and in-line styling for specific components.
