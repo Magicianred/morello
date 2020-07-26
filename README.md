@@ -2,7 +2,7 @@
 
 ##### `Yarn && yarn start`
 
-#### TODOS
+##### TODOS
+* [x]Redux for Connecting state.
 
-- [x]Redux for Connecting state.
-- [x]Material-ui and in-line styling for specific components.
+* [x]Material-ui and in-line styling for specific components.
