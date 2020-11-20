@@ -123,6 +123,7 @@ const styles = {
     width: "inherit",
     outline: "none",
     border: "none",
+    width: "100%",
   },
   formButtonGroup: {
     marginTop: 8,
