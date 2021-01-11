@@ -4,6 +4,9 @@ import Textarea from "react-textarea-autosize";
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 
+import { connect } from "react-redux";
+import { addList, addCard } from "../actions";
+
 class TrelloActionButton extends Component {
   state = {
     formOpen: false,
@@ -24,6 +27,26 @@ class TrelloActionButton extends Component {
       text: e.target.value,
     });
   };
+  handleAddList = () => {
+    const { dispatch } = this.props;
+    const { text } = this.state;
+    if (text) {
+      dispatch(addList(text));
+    }
+    return;
+    //list adding
+  };
+  handleAddCard = ()=>{
+    const {dispatch, listID} = this.props;
+    const {text} = this.state;
+    if(text){
+      this.setState({
+        text:""
+      })
+      dispatch(addCard(listID,text))
+    }
+
+  }
   renderActionButton = () => {
     const { list } = this.props;
     const buttonText = list ? "New List" : "New card";
@@ -40,7 +63,7 @@ class TrelloActionButton extends Component {
           backgroundColor: buttonTextBackground,
         }}
       >
-        <p onClick={this.openForm}>
+        <div onClick={this.openForm}>
           <Icon
             style={{
               color: "#931919",
@@ -49,7 +72,7 @@ class TrelloActionButton extends Component {
             add
           </Icon>
           <div>{buttonText}</div>
-        </p>
+        </div>
       </div>
     );
   };
@@ -78,6 +101,7 @@ class TrelloActionButton extends Component {
         </Card>
         <div style={styles.formButtonGroup}>
           <Button
+            onMouseDown={list ? this.handleAddList: this.handleAddCard}
             variant="contained"
             style={{
               color: "white",
@@ -132,4 +156,4 @@ const styles = {
   },
 };
 
-export default TrelloActionButton;
+export default connect()(TrelloActionButton);
