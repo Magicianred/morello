@@ -144,7 +144,7 @@ const styles = {
   },
   textAreaStyle: {
     resize: "none",
-    width: "inherit",
+    // width: "inherit",
     outline: "none",
     border: "none",
     width: "100%",
