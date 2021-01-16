@@ -36,23 +36,23 @@ class TrelloActionButton extends Component {
     return;
     //list adding
   };
-  handleAddCard = ()=>{
-    const {dispatch, listID} = this.props;
-    const {text} = this.state;
-    if(text){
+  handleAddCard = () => {
+    const { dispatch, listID } = this.props;
+    const { text } = this.state;
+    if (text) {
       this.setState({
-        text:""
-      })
-      dispatch(addCard(listID,text))
+        text: "",
+      });
+      dispatch(addCard(listID, text));
     }
-
-  }
+  };
   renderActionButton = () => {
     const { list } = this.props;
-    const buttonText = list ? "New List" : "New card";
+    const buttonText = list ? "New Day" : "New card";
     const buttonTextColor = list ? "white" : "inherit";
     const buttonTextOpacity = list ? 1 : 0.5;
     const buttonTextBackground = list ? "rgba(0,0,0,0.15)" : "inherit";
+    const margin = list ? "4px" : "inherit";
 
     return (
       <div
@@ -61,6 +61,7 @@ class TrelloActionButton extends Component {
           opacity: buttonTextOpacity,
           color: buttonTextColor,
           backgroundColor: buttonTextBackground,
+          margin: margin,
         }}
       >
         <div onClick={this.openForm}>
@@ -101,7 +102,7 @@ class TrelloActionButton extends Component {
         </Card>
         <div style={styles.formButtonGroup}>
           <Button
-            onMouseDown={list ? this.handleAddList: this.handleAddCard}
+            onMouseDown={list ? this.handleAddList : this.handleAddCard}
             variant="contained"
             style={{
               color: "white",
